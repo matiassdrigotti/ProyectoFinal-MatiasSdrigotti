@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de viajes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css"> 
+</head>
+<body>
+    <main>
+        <div class="main">
+            <form class="formulario" id="calculadoraVacaciones">
+                <h2>Calculadora de viajes</h2>
+                <label>
+                    Destino
+                    <input type="text" id="destino" required>
+                </label>
+                <label>
+                    Presupuesto (importe)
+                    <input type="number" id="presupuesto" required>
+                </label>
+                <label>
+                    Alojamiento (importe)
+                    <input type="number" id="alojamiento" required>
+                </label>
+                <label>
+                    Transporte (importe)
+                    <input type="number"  id="transporte" required>
+                </label>
+                <label>
+                    Comida (importe)
+                    <input type="number" id="comida" required>
+                </label>
+                <label>
+                    <label for="">Indicar ciudad para saber temperatura</label>
+                    <input type="text" id="ciudad">
+                </label>
+                <input type="submit" value="Calcular"  id="btnClima" class="btn2">
+            </form>
+        </div>
+        <div class="contenedor">
+            <div class="iconos">
+              <h5><i class="fas fa-plane"></i></h5>
+              <h5><i class="fas fa-wallet"></i></h5> 
+              <h5><i class="fas fa-money-bill-wave-alt"></i></h5>  
+              <h5><i class="fa-solid fa-temperature-three-quarters"></i></h5>
+            </div>
+            <div class="data">
+              <div class="resultado" id="resultado"></div>
+            </div>
+        </div>
+        <div class="btnReset2">
+            <button type="submit" class="btnReset" id="btnReset">Restablecer</button>
+        </div>    
+        <div class="historial">
+            <button class="btn" onclick="verListado()">Ver Historial</button>
+            <div id="resultadoHistorial"></div>
+            <div id="suma"></div>
+        </div>
+    </main>     
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/javascripts.js"></script>
+</body>
+</html>
+
+
+

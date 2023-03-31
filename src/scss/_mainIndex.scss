@@ -1,0 +1,160 @@
+.formulario{
+    background-color:rgba(20, 18, 18, 0.582) ;
+    max-width: 800px;
+    margin: 20px auto ;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.808);
+    padding: 30px;
+    margin-bottom: 10px;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 60px;
+    grid-template-areas:  "zona1    zona1"
+                          "zona2    zona3"
+                          "zona4    zona5"
+                          "zona6    zona6"
+                          "zona7    zona7";
+    box-shadow: -1px 0px 7px 4px rgba(255,255,255,0.46) inset;
+    -webkit-box-shadow: -1px 0px 7px 4px rgba(255,255,255,0.46) inset;
+    -moz-box-shadow: -1px 0px 7px 4px rgba(255,255,255,0.46) inset;
+    
+    @media(max-width:800px){
+        width: 100vw;
+        margin: 0px 0px 20px 0px;
+        border-radius: 0px;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 60px;
+        grid-template-areas:  "zona1"
+                              "zona2"
+                              "zona3"
+                              "zona4"
+                              "zona5"
+                              "zona6"
+                              "zona7";
+    }
+    @for $var from 1 to 8{
+        @if($var == 1){
+            h2:nth-child(#{$var}){
+                grid-area: zona#{$var};
+        }
+    }
+    @else if($var == 7){
+        button:nth-child(7){
+            grid-area:zona#{$var};
+            width: 200px;
+            border-radius: 5px;
+            border: none;
+            font-size: 20px;
+            font-weight: bold;
+            color: rgba(189, 42, 42, 0.918);
+            margin-top: 20px;
+        }
+        
+    }
+    @else{
+        label:nth-child(#{$var}){
+            grid-area: zona#{$var};
+        }
+    }       
+}       
+    label {
+        display: flex;
+        flex-direction: column;
+      
+      }
+    label input , .formulario label textarea {
+        background-color:transparent;
+        border: 0;
+        border-bottom: 1px solid white;
+        margin-top: 10px;
+        outline: none;
+        color: white;
+      }            
+  }
+  .btn2{
+    background-color: rgba(33, 35, 36, 0.733);
+    border: none;
+    color: white;
+    font-size: large;
+    height: 45px;
+    z-index: 1;
+    margin: 10px;
+    .i {
+      margin-left: 20px;
+    }
+  }
+
+.iconos {
+ display: flex;
+ justify-content: space-evenly;
+ padding: 10px;
+ font-size: 50px;
+ color: rgb(197, 49, 49);
+ 
+}
+
+.contenedor-data{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(95, 113, 133);
+
+  > h6 {
+    text-align: center;
+  }
+}
+
+
+.historial{
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  @media(max-width:500px){
+    justify-content: space-evenly;
+    
+}
+  
+}
+
+.btn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 14px ;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  border: none;
+  background: #6E6D70;
+  color: #DFDEDF;
+  height: 40px;
+
+}
+
+.btnReset2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > .btnReset{
+  padding: 6px 14px ;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  border: none;
+  background: #6E6D70;
+  color: #DFDEDF;
+  height: 40px;
+  }
+}
+
+.cold {
+  color: rgb(237, 100, 214);
+}
+.warm {
+  color: brown;
+}
+
+
